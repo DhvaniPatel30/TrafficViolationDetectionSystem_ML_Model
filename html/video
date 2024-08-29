@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Upload and Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .upload-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Video Upload</h1>
+        <div class="upload-form">
+            <input type="file" id="videoFile" accept="video/*" />
+            <button onclick="uploadVideo()">Upload Video</button>
+        </div>
+        <br>
+        <a href="#" id="videoLink" style="display: none;">Click to Watch Video</a>
+    </div>
+
+    <script>
+        function uploadVideo() {
+            // You would typically use JavaScript to send the uploaded file to the server for processing.
+            // For simplicity, we're just showing/hiding the link here.
+            const videoFileInput = document.getElementById("videoFile");
+            const videoLink = document.getElementById("videoLink");
+
+            if (videoFileInput.files.length > 0) {
+                videoLink.style.display = "inline-block";
+            } else {
+                alert("Please select a video to upload.");
+            }
+        }
+    </script>
+</body>
+</html>

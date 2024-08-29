@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Analysis Video Upload</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        #upload-container {
+            text-align: center;
+        }
+
+        #video-upload {
+            display: none;
+        }
+
+        label {
+            display: block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        label:hover {
+            background-color: #2980b9;
+        }
+
+        #file-name {
+            margin-top: 10px;
+        }
+
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Traffic Analysis Video Upload</h1>
+    </header>
+    <main>
+        <div id="upload-container">
+            <label for="video-upload">Choose a Video</label>
+            <input type="file" accept="video/*" id="video-upload">
+            <p id="file-name"></p>
+        </div>
+        <div id="analysis-result" style="display: none;">
+            <h2>Analysis Result</h2>
+            <!-- Display analysis result here -->
+        </div>
+    </main>
+
+    <script>
+        const videoUpload = document.getElementById('video-upload');
+        const fileNameDisplay = document.getElementById('file-name');
+        const analysisResult = document.getElementById('analysis-result');
+
+        videoUpload.addEventListener('change', () => {
+            const file = videoUpload.files[0];
+            if (file) {
+                fileNameDisplay.textContent = `Selected File: ${file.name}`;
+                analysisResult.style.display = 'block';
+                // In a real application, you would perform traffic analysis here.
+                // This example only displays a placeholder result.
+                analysisResult.innerHTML = '<p>Analysis result: Helmet detected.</p>';
+            } else {
+                fileNameDisplay.textContent = '';
+                analysisResult.style.display = 'none';
+                analysisResult.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+</html>

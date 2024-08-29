@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0 0 20px;
+            color: #333;
+        }
+
+        .user-type {
+            margin-bottom: 20px;
+        }
+
+        .user-type label {
+            margin-right: 10px;
+        }
+
+        .user-type input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .login-button {
+            background-color: #008000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #006600;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <div class="user-type">
+                <label for="paid">Paid User:</label>
+                <input type="radio" id="paid" name="user-type" value="paid">
+                <label for="premium">Premium User:</label>
+                <input type="radio" id="premium" name="user-type" value="premium">
+                <label for="guest">Login as Guest:</label>
+                <input type="radio" id="guest" name="user-type" value="guest">
+            </div>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+</body>
+</html>

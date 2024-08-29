@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Video Player with Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .video-frame {
+            display: flex;
+            width: 800px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        video {
+            width: 50%;
+        }
+
+        #slider-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #slider {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="video-frame">
+            <video id="video1" controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="video2" controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div id="slider-container">
+        <input type="range" id="slider" min="0" max="100" value="50">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const detectHelmetBtn = document.getElementById('detect-helmet-btn');
+    const helmetResult = document.getElementById('helmet-result');
+
+    detectHelmetBtn.addEventListener('click', function () {
+        // In a real system, you would send the video to a backend for analysis
+        // For simplicity, we'll display a message here
+        helmetResult.innerHTML = 'Helmet detection results will be displayed here.';
+    });
+});

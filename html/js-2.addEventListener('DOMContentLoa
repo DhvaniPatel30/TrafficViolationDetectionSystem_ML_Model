@@ -1,0 +1,15 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const ruleLinks = document.querySelectorAll('ul li a');
+
+    ruleLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the default link behavior
+            const targetId = link.getAttribute('href').substring(1); // Remove the "#" symbol
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});

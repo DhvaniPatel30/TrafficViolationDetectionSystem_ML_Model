@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Analysis System - Upload</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file for styling -->
+</head>
+<body>
+    <header>
+        <h1 class="animated">Traffic Analysis System</h1>
+    </header>
+    <main>
+        <div class="upload-form animated">
+            <h2>Upload a Video</h2>
+            <form>
+                <label for="video">Select a video:</label>
+                <input type="file" accept="video/*" id="video" name="video" required>
+
+                <button type="submit" class="cta-button">Upload Video</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

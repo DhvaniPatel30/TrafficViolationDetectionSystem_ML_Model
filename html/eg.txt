@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Analysis Webpage</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Traffic Analysis</h1>
+    </header>
+    <main>
+        <section id="helmet-detection">
+            <h2>Helmet Detection</h2>
+            <p>Upload a video to detect helmets:</p>
+            <input type="file" accept="video/*" id="video-upload">
+            <button id="detect-helmet-btn">Detect Helmet</button>
+            <div id="helmet-result">
+                <!-- Display helmet detection results here -->
+            </div>
+        </section>
+        <section id="traffic-rules">
+            <h2>Traffic Rules Information</h2>
+            <p>Learn about the importance of traffic rules:</p>
+            <ul>
+                <li><a href="#rule-1">Rule 1: Follow Speed Limits</a></li>
+                <li><a href="#rule-2">Rule 2: Wear Seatbelts</a></li>
+                <!-- Add more rules here -->
+            </ul>
+            <div id="rule-1">
+                <h3>Rule 1: Follow Speed Limits</h3>
+                <p>Speed limits are in place to ensure safety on the road...</p>
+            </div>
+            <div id="rule-2">
+                <h3>Rule 2: Wear Seatbelts</h3>
+                <p>Wearing seatbelts is essential to protect yourself...</p>
+            </div>
+            <!-- Add more rule details here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Traffic Analysis Webpage</p>
+    </footer>
+
+    <script>
+        // Add your JavaScript code here
+    </script>
+</body>
+</html>
